@@ -1,14 +1,19 @@
 import React, { useContext } from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Link, useNavigate } from "react-router-dom";
 import { UserContext } from "../context/UserProvider";
 import { RiHome2Fill } from "react-icons/ri";
 import { GiSoap } from "react-icons/gi";
 import { GiButterToast } from "react-icons/gi";
 import { RiLogoutBoxLine } from "react-icons/ri";
 import { IoBody } from "react-icons/io5";
+i
 
 function Sidebar() {
-  const { logout } = useContext(UserContext);
+  const { logout, userState: {token} } = useContext(UserContext);
+  const navigate = useNavigate()
+  function handleClick(){
+    token ? logout() : navigate("/login")
+  }
   return (
     <>
       <div id="mySidebar" className="sidebar">
@@ -34,8 +39,8 @@ function Sidebar() {
           </li>
           </Link>
         </div>
-        <li onClick={logout}>
-          <RiLogoutBoxLine /> Logout
+        <li onClick={handleClick}>
+          <RiLogoutBoxLine /> {token ? "Logout" : "Login"}
         </li>
       </div>
     </>
