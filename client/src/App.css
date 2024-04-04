@@ -1,0 +1,445 @@
+#root {
+  --main-bg-color: #f0f0f0;
+  --main-text-color: #333;
+  --accent-color: #007bff;
+}
+body {
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  background-color: #1ae9ab;
+  height: 100vh;
+  width: 100%;
+  margin: 0 auto;
+}
+/* AUTHORIZATION PAGE */
+.auth--page{
+  height: 100vh;
+  width: 100%;
+  background-color: rgb(58, 65, 95);
+  display: flex;
+  align-items: center;
+}
+.member {
+  cursor: pointer;
+}
+.link {
+  text-decoration: none;
+  color: whitesmoke;
+}
+/* .link:hover{
+  color: rgb(70, 70, 70);
+  border: solid 1px #c6c6c6;
+  background-color: #c6c6c6;
+  border-radius: 10px;
+} */
+.login--container {
+  margin: 0 auto;
+  text-align: center;
+  height: 400px;
+  width: 800px;
+  border: solid #3a415f 3px;
+  color: rgb(58, 65, 95);
+  background-color: #1ae9ab;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.login--container > h1{
+  font-family: 'Times New Roman', Times, serif;
+  letter-spacing: 3px;
+  font-weight: 500;
+}
+.login--container input {
+  background-color: #1ae9ab;
+  color: rgb(58, 65, 95);
+  border: solid rgb(58, 65, 95) 2px;
+  font-size: 20px;
+  border-radius: 8px;
+  width: 300px;
+  margin: 1%;
+}
+.login--container input:hover{
+  background-color: #99f3cc;
+}
+.login--container button {
+  width: 200px;
+  color: #333;
+  border: solid rgb(58, 65, 95) 2px;
+  border-radius: 4px;
+  font-size: 20px;
+  background-color:#1ae9ab;
+  cursor: pointer;
+}
+.login--container button:hover{
+  background-color: #99f3cc;
+}
+.login--container > h3{
+  cursor: pointer;
+}
+.link--container{
+  display: flex;
+}
+.social--links{
+  font-size: 30px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+/* HEADER */
+.header {
+  margin: 0 auto;
+  align-items: center;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 25% 50% 25%;
+  font-size: 20px;
+  top: 0;
+  left: 0;
+  height: 100px;
+  line-height: 30px;
+  width: 100%;
+  flex-wrap: nowrap;
+  color: #1ae9ab;
+  background-color: #3a415f;
+}
+.button--container{
+  display: flex;
+  justify-content: left;
+}
+.openbtn {
+  grid-column: 1/1;
+  top: 15px;
+  left: 20px;
+  font-size: 30px;
+  cursor: pointer;
+  background-color: #3a415f;
+  color: #1ae9ab;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 50%;
+  transition: 0.5s ease;
+}
+.openbtn:hover {
+  background-color: #3a415f;
+  font-size: 40px;
+}
+.header h2 {
+  grid-column: 2/3;
+  font-size: 40px;
+  letter-spacing: 3px;
+  font-weight: 500;
+  font-family: "Times New Roman", Times, serif;
+}
+.header li {
+  grid-column: 3/4;
+  justify-self: flex-end;
+  font-size: 30px;
+  text-decoration: none;
+  cursor: pointer;
+  list-style-type: none;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: #1ae9ab;
+  transition: .75s ease;
+}
+.header li:hover{
+  background-color: #3a415f;
+  font-size: 40px;
+}
+.header--items {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+/* SIDEBAR */
+.sidebar {
+  text-align: left;
+  height: 100vh;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  background-color: #1ae9ab;
+  color: rgb(58, 65, 95);
+  overflow-x: hidden;
+  transition: 0.75s ease;
+}
+.sidebar1 {
+  border-bottom: solid 2px whitesmoke;
+}
+.sidebar li {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 4%;
+  padding: 10px 10px 10px 25px;
+  text-decoration: none;
+  font-size: 20px;
+  color: rgb(58, 65, 95);
+  display: block;
+  cursor: pointer;
+}
+
+.sidebar li:hover {
+  color: rgb(70, 70, 70);
+  border: solid 1px #15cb94;
+  background-color: #15cb94;
+  border-radius: 10px;
+}
+.link{
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  font-size: 20px;
+  color: rgb(58, 65, 95);
+  display: block;
+  cursor: pointer;
+}
+.sidebar:hover {
+  color: rgb(70, 70, 70);
+}
+.main {
+  margin-left: 220px; /* Same as the width of the sidebar */
+  padding: 0px 10px;
+}
+
+/* SOAP PAGE */
+.soap--page{
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  transition: .75s ease;
+  justify-content: center;
+  overflow-x: hidden;
+}
+.soapCard--container{
+  margin: 1%;
+  height: 250px;
+}
+.soap--card{
+  height: 250px;
+  width: 300px;
+  color: #3a415f;
+}
+.soap--card img{
+  height: 200px;
+  width: 100%;
+  border-radius: 8px;
+}
+.soap--card h3{
+  color: #3a415f;
+  letter-spacing: 2px;
+  font-size: 20px;
+}
+.button--container{
+  display: grid;
+  grid-template-columns: 25% 75%;
+  align-items: center;
+}
+.button--container2{
+  grid-column: 2/3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.soap--card button{
+  grid-column: 2/3;
+  height: 30px;
+  width: 100px;
+  margin: 1%;
+  background-color: #3a415f;
+  color: #1ae9ab;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: .50s ease;
+}
+.soap--card button:hover{
+  z-index: 10;
+  transform: scale(1.1);
+}
+.wishlist--heart{
+  grid-column: 1/2;
+  justify-self: right;
+  cursor: pointer;
+  font-size: 25px;
+  transition: .5s ease;
+}
+.wishlist--heart:hover{
+  z-index: 10;
+  transform: scale(1.4);
+}
+
+/* BUTTER PAGE */
+.butter--page{
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  transition: .75s ease;
+  justify-content: center;
+  overflow-x: hidden;
+}
+.butterCard--container{
+  margin: 1%;
+  height: 250px;
+}
+.butter--card{
+  height: 250px;
+  width: 300px;
+  color: #3a415f;
+}
+.butter--card img{
+  height: 200px;
+  width: 100%;
+  border-radius: 8px;
+}
+.title--price{
+  display: grid;
+  grid-template-columns: 30% 70%;
+}
+.butter--title{
+  color: #3a415f;
+  letter-spacing: 2px;
+  font-size: 20px;
+  justify-self: center;
+  grid-column: 2/3;
+}
+
+.price{
+  grid-column: 1/2; 
+justify-self: center;
+}
+.button--container{
+  display: grid;
+  grid-template-columns: 25% 75%;
+  align-items: center;
+}
+.button--container2{
+  grid-column: 2/3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.butter--card button{
+  grid-column: 2/3;
+  height: 30px;
+  width: 100px;
+  margin: 1%;
+  background-color: #3a415f;
+  color: #1ae9ab;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: .50s ease;
+}
+.butter--card button:hover{
+  z-index: 10;
+  transform: scale(1.1);
+}
+
+/* PROFILE PAGE */
+.profile--page{
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  transition: .75s ease;
+  overflow-x: hidden;
+  padding-top: 5%;
+  color: #3a415f;
+}
+.product--page{
+  height: 300px;
+  width: 200px;
+  border: solid 3px #3a415f;
+  display: flex;
+  flex-direction: column;
+}
+.text{
+  color: whitesmoke;
+  background-color: #3a415f;
+  border-radius: 4px;
+  width: 250px;
+  height: 50px;
+}
+.review--button{
+  height: 30px;
+  width: 100px;
+  margin: 1%;
+  background-color: #3a415f;
+  color: #1ae9ab;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: .50s ease;
+}
+.review--button:hover{
+  z-index: 10;
+  transform: scale(1.1);
+}
+
+/* CART PAGE */
+.shoppingcart--Card{
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 75% 25%;
+  text-align: center;
+  align-items: center;
+}
+.cart--container2{
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  grid-column: 1/2;
+  background-color: #3a415f;
+}
+.cart--card{
+  grid-column: 1/2;
+  justify-self: center;
+  height: 200px;
+  margin: 1%;
+  width: 400px;
+  border: solid 3px #3a415f;
+  background-color: #1ae9ab;
+  color: whitesmoke;
+  border-radius: 4px;
+}
+.buy--container{
+  grid-column: 2/3;
+  justify-self: center;
+  height: 100vh;
+  width: 100%;
+  background-color:#1ae9ab;
+  color:#3a415f;
+}
+.buy--container > button{
+  height: 30px;
+  width: 100px;
+  margin: 1%;
+  background-color: #3a415f;
+  color: #1ae9ab;
+  align-items: center;
+  justify-self: center;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: .50s ease;
+}
+.buy--container > button:hover{
+  z-index: 10;
+  transform: scale(1.1);
+}
+
+
+/* HOMEPAGE */
+.homepage--small{
+  color: #3a415f;
+  text-align: left;
+  margin-left: 2%;
+}
+.homepage--products{
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+}
