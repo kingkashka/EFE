@@ -12,8 +12,8 @@ userAxios.interceptors.request.use(config => {
 
 function UserProvider(props) {
   const initState = {
-    user: JSON.parse(localStorage.getItem("user")),
-    token: localStorage.getItem("token"),
+    user: JSON.parse(localStorage.getItem("user")) || {},
+    token: localStorage.getItem("token") || "",
     reviews: [],
     butter: [],
     cart: [],
@@ -51,15 +51,13 @@ function UserProvider(props) {
     axios
       .post("/auth/login", credentials)
       .then((res) => {
-        const { user, token, wishlist } = res.data;
+        const { user, token} = res.data;
         localStorage.setItem("token", token);
         localStorage.setItem("user", JSON.stringify(user));
-        getUserIssues(res.data.user._id)
         setUserState((prevState) => ({
           ...prevState,
           user,
-          token,
-          wishlist,
+          token
         }));
       })
       .catch((err) => handleAuthErr(err.response.data.errMsg));

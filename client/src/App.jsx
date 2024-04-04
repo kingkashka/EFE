@@ -23,8 +23,8 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="/login" element={ token ? <Navigate to="/" /> : <Auth logout={logout} />} />
         <Route path="/" element={<Home />} />
+        <Route path="/login" element={ token ? <Navigate to="/" /> : <Auth logout={logout} />} />
         <Route path="/profile" element={<ProtectedRoute token={token} redirectTo={"/login"}>
           <Profile/>
         </ProtectedRoute>} />
