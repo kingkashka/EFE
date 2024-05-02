@@ -443,3 +443,60 @@ justify-self: center;
   text-align: center;
   justify-content: center;
 }
+
+@media screen and (max-width: 768px) {
+  /* Adjustments for smaller screens */
+  .login--container {
+    width: 90%; /* Adjusting width to fit smaller screens */
+    max-width: 400px; /* Limiting maximum width for better readability */
+  }
+  
+  .soap--card,
+  .butter--card {
+    width: 90%; /* Adjusting card width for smaller screens */
+    max-width: 300px; /* Limiting maximum width for better readability */
+  }
+  
+  .header {
+    grid-template-columns: 40% 40%; /* Adjusting header layout for smaller screens */
+  }
+  
+  .button--container {
+    justify-content: center; /* Centering buttons on smaller screens */
+  }
+  
+  .homepage--small {
+    margin-left: 0; /* Removing left margin on smaller screens */
+  }
+}
+
+@media screen and (max-width: 576px) {
+  /* Adjustments for mobile devices */
+  body {
+    font-size: 16px; /* Increasing font size for better readability */
+  }
+  
+  .login--container {
+    width: 90%; /* Adjusting width to fit smaller screens */
+    max-width: 300px; /* Limiting maximum width for better readability */
+  }
+  
+  .soap--card,
+  .butter--card {
+    width: 90%; /* Adjusting card width for smaller screens */
+    max-width: 250px; /* Limiting maximum width for better readability */
+  }
+  
+  .header {
+    grid-template-columns: 100%; /* Stacking header items for better mobile layout */
+    text-align: center; /* Centering header items for better mobile layout */
+  }
+  
+  .button--container {
+    justify-content: center; /* Centering buttons on smaller screens */
+  }
+  
+  .homepage--small {
+    margin-left: 0; /* Removing left margin on smaller screens */
+  }
+}
