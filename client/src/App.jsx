@@ -31,6 +31,7 @@ function App() {
         <Route path="/yourcart" element={<CartPage />} />
         <Route path="/butters" element={<ButterPage />} />
         <Route path="/soap" element={<SoapPage />} />
+        <Route path="/soap"  />
       </Routes>
     </>
   );
